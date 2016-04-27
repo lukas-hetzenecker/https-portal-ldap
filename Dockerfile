@@ -19,6 +19,8 @@ RUN tar xzf /tmp/s6-overlay-amd64.tar.gz -C / &&\
     apt-get update && \
     apt-get install -y python ruby2.0 cron && \
     apt-get clean && \
+    ln -sf /usr/bin/ruby2.0 /usr/bin/ruby && \
+    ln -sf /usr/bin/gem2.0 /usr/bin/gem && \
     rm -rf /var/lib/apt/lists/*
 
 COPY ./fs_overlay /
