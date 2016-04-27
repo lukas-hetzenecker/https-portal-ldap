@@ -17,7 +17,7 @@ RUN tar xzf /tmp/s6-overlay-amd64.tar.gz -C / &&\
     rm /etc/nginx/sites-enabled/default && \
     rm /etc/nginx/sites-available/default && \
     apt-get update && \
-    apt-get install -y python ruby cron && \
+    apt-get install -y python ruby2.0 cron && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
