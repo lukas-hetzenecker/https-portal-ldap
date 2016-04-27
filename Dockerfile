@@ -14,7 +14,8 @@ RUN tar xzf /tmp/s6-overlay-amd64.tar.gz -C / &&\
     tar -C /bin -xzf /tmp/docker-gen-linux-amd64-$DOCKER_GEN_VERSION.tar.gz && \
     rm /tmp/docker-gen-linux-amd64-$DOCKER_GEN_VERSION.tar.gz && \
     rm /tmp/s6-overlay-amd64.tar.gz && \
-    rm /etc/nginx/conf.d/default.conf && \
+    rm /etc/nginx/sites-enabled/default && \
+    rm /etc/nginx/sites-available/default && \
     apt-get update && \
     apt-get install -y python ruby cron && \
     apt-get clean && \
