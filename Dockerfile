@@ -1,4 +1,4 @@
-FROM nginx
+FROM xdrum/nginx-extras:stable
 
 MAINTAINER Weiyan Shao "lighteningman@gmail.com"
 
